@@ -589,6 +589,9 @@ class ApiClient
         if ($defaultAct !== null) {
             $parameters['default_act'] = $defaultAct;
         }
+        if ($idealIssuerId !== null) {
+            $parameters['ideal_issuer_id'] = $idealIssuerId;
+        }
 
         if ($this->test) {
             $base = 'https://test.docdatapayments.com/ps/menu';
