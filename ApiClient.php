@@ -546,7 +546,12 @@ class ApiClient
      * @param string $defaultAct           If a default payment method is declared to direct the shopper
      *                                     to that payment method in the payment menu. Can contain the
      *                                     values “yes” or “no”.
-     *
+     * @param string $idealIssuerId        The ID of the iDeal issuer to skip bank-selection in case of
+     *                                     iDeal payment. Should be a valid and existing BIC-code of a bank
+     *                                     See https://www.ideal-status.nl/static/sepa_issuers_current.json
+     *                                     for a list of up-to-date issuers. $defaultAct should be set to "yes"
+     *                                     for this to work.
+     *                                     
      * @return string
      */
     public function getPaymentUrl(
@@ -557,7 +562,8 @@ class ApiClient
         $pendingUrl = null,
         $errorUrl = null,
         $defaultPaymentMethod = null,
-        $defaultAct = null
+        $defaultAct = null,
+        $idealIssuerId = null
     ) {
         $parameters                        = [];
         $parameters['command']             = 'show_payment_cluster';
