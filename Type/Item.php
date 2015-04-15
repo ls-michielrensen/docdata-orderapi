@@ -300,7 +300,10 @@ class Item extends AbstractObject
         $description,
         Amount $netAmount,
         Amount $grossAmount,
-        Vat $vat
+        Vat $vat,
+        Amount $totalNetAmount,
+        Amount $totalGrossAmount,
+        Vat $totalVat
     )
     {
         $this->setNumber($number);
@@ -311,6 +314,9 @@ class Item extends AbstractObject
         $this->setNetAmount($netAmount);
         $this->setGrossAmount($grossAmount);
         $this->setVat($vat);
+        $this->setTotalNetAmount($totalNetAmount);
+        $this->setTotalGrossAmount($totalGrossAmount);
+        $this->totalVat($totalVat);
     }
 
     /**
@@ -321,10 +327,6 @@ class Item extends AbstractObject
     public function toArray()
     {
         $return                     = parent::toArray();
-        $return['totalNetAmount']   = $return['quantity'] * $return['netAmount']['_'];
-        $return['totalGrossAmount'] = $return['quantity'] * $return['grossAmount']['_'];
-        $return['totalVat']         = $return['quantity'] * $return['vat']['amount']['_'];
-
         return $return;
     }
 }
