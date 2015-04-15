@@ -204,7 +204,7 @@ class Item extends AbstractObject
     }
 
     /**
-     * @param int $quantity
+     * @param Quantity $quantity
      */
     public function setQuantity($quantity)
     {
@@ -212,7 +212,7 @@ class Item extends AbstractObject
     }
 
     /**
-     * @return int
+     * @return Quantity
      */
     public function getQuantity()
     {
@@ -284,19 +284,19 @@ class Item extends AbstractObject
     }
 
     /**
-     * @param string $code
-     * @param string $name
-     * @param int    $quantity
-     * @param string $description
-     * @param Amount $netAmount
-     * @param Amount $grossAmount
-     * @param Vat    $vat
+     * @param string   $code
+     * @param string   $name
+     * @param Quantity $quantity
+     * @param string   $description
+     * @param Amount   $netAmount
+     * @param Amount   $grossAmount
+     * @param Vat      $vat
      */
     public function __construct(
         $number,
         $code,
         $name,
-        $quantity,
+        Quantity $quantity,
         $description,
         Amount $netAmount,
         Amount $grossAmount,
