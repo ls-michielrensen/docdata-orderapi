@@ -321,9 +321,9 @@ class Item extends AbstractObject
     public function toArray()
     {
         $return                     = parent::toArray();
-        $return['totalNetAmount']   = $return['quantity']['_'] * $return['netAmount']['_'];
-        $return['totalGrossAmount'] = $return['quantity']['_'] * $return['grossAmount']['_'];
-        $return['totalVat']         = $return['quantity']['_'] * $return['vat']['amount']['_'];
+        $return['totalNetAmount']   = $return['quantity'] * $return['netAmount']['_'];
+        $return['totalGrossAmount'] = $return['quantity'] * $return['grossAmount']['_'];
+        $return['totalVat']         = $return['quantity'] * $return['vat']['amount']['_'];
 
         return $return;
     }
