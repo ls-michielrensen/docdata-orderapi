@@ -19,6 +19,8 @@ abstract class AbstractObject implements TypeInterface
                 continue;
             }
 
+            $data = null;
+
             if ($value instanceof TypeInterface) {
                 $data = $value->toArray();
             } else if (is_array($value)) {
