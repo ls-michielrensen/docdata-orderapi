@@ -316,7 +316,7 @@ class Item extends AbstractObject
         $this->setVat($vat);
         $this->setTotalNetAmount($totalNetAmount);
         $this->setTotalGrossAmount($totalGrossAmount);
-        $this->totalVat($totalVat);
+        $this->setTotalVat($totalVat);
     }
 
     /**
