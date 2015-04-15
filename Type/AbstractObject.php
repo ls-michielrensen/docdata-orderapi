@@ -21,6 +21,15 @@ abstract class AbstractObject implements TypeInterface
 
             if ($value instanceof TypeInterface) {
                 $data = $value->toArray();
+            } else if (is_array($value)) {
+                foreach($value as $element) {
+                    if ($element instanceof TypeInterface) {
+                        $data[] = $element->toArray();
+                    }
+                    else {
+                        $data[] = (string) $value;
+                    }
+                }
             } else {
                 $data = (string) $value;
             }
