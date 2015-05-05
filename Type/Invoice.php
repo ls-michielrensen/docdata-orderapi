@@ -17,7 +17,7 @@ class Invoice extends AbstractObject
     /**
      * Total VAT amount for this order.
      *
-     * @var Vat
+     * @var VatAmount
      */
     protected $totalVatAmount;
 
@@ -107,15 +107,15 @@ class Invoice extends AbstractObject
     }
 
     /**
-     * @param Vat $totalVatAmount
+     * @param VatAmount $totalVatAmount
      */
-    public function setTotalVatAmount(Vat $totalVatAmount)
+    public function setTotalVatAmount(VatAmount $totalVatAmount)
     {
         $this->totalVatAmount = $totalVatAmount;
     }
 
     /**
-     * @return Vat
+     * @return VatAmount
      */
     public function getTotalVatAmount()
     {

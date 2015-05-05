@@ -57,7 +57,7 @@ class VatAmount extends AbstractObject {
     {
         return $this->currency;
     }
-    
+
     /**
      * Convert the object into an array
      *
