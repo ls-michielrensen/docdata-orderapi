@@ -11,8 +11,6 @@ The Order API component for the DocData library.
 [![Total Downloads](https://poser.pugx.org/cleentfaar/docdata-orderapi/downloads.svg)](https://packagist.org/packages/cleentfaar/docdata-orderapi)
 [![Latest Unstable Version](https://poser.pugx.org/cleentfaar/docdata-orderapi/v/unstable.svg)](https://packagist.org/packages/cleentfaar/docdata-orderapi)
 
-**NOTE:** Using Symfony? Check out the bundle that was made to implement this library [here](https://github.com/cleentfaar/CLDocDataOrderApiBundle)!
-
 
 ## Documentation
 
@@ -29,7 +27,7 @@ The current supported API version is `1.2`.
 
 ## License
 
-This package is dual-licensed; mostly MIT (my own code) and some BSD (the original library, see the complete license [here](LICENSE)).
+This package is dual-licensed; mostly MIT (my own code and the code from the previous author) and some BSD (the original library, see the complete license [here](LICENSE)).
 
 
 ## Thanks

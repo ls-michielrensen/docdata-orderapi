@@ -1,15 +1,15 @@
 {
-  "name": "cleentfaar/docdata-orderapi",
+  "name": "michielrensen/docdata-orderapi",
   "type": "library",
-  "description": "The Order API component for the DocData library. Adaption of the 'Docdata Payments'-wrappers by Tijs Verkoyen.",
+  "description": "The Order API component for the DocData library.",
   "license": [
     "MIT",
     "BSD"
   ],
   "authors": [
     {
-      "name": "Cas Leentfaar",
-      "email": "info@casleentfaar.com"
+      "name": "Michiel Rensen",
+      "email": "info@michielrensen.nl"
     }
   ],
   "require": {
