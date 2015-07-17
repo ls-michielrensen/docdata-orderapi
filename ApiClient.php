@@ -247,9 +247,6 @@ class ApiClient
 
         // validate response
         if (isset($response->createError)) {
-            if ($this->test) {
-                var_dump($this->soapClient->__getLastRequest());
-            }
 
             $this->logger->error("Payment create: " . $paymentId, (array) $response->createError->getError()->getExplanation());
 
@@ -284,9 +281,6 @@ class ApiClient
 
         // validate response
         if (isset($response->startError)) {
-            if ($this->test) {
-                var_dump($this->soapClient->__getLastRequest());
-            }
 
             $this->logger->error("Payment start: " . $orderKey, (array) $response->startError->getError()->getExplanation());
 
@@ -322,9 +316,6 @@ class ApiClient
 
         // validate response
         if (isset($response->cancelError)) {
-            if ($this->test) {
-                var_dump($this->soapClient->__getLastRequest());
-            }
 
             $this->logger->error("Payment cancel: " . $paymentOrderKey, (array) $response->cancelError->getError()->getExplanation());
 
@@ -401,9 +392,6 @@ class ApiClient
 
         // validate response
         if (isset($response->captureError)) {
-            if ($this->test) {
-                var_dump($this->soapClient->__getLastRequest());
-            }
 
             $this->logger->error("Payment capture: " . $merchantCaptureReference, (array) $response->captureError->getError()->getExplanation());
 
@@ -474,10 +462,6 @@ class ApiClient
 
         // validate response
         if (isset($response->refundError)) {
-            if ($this->test) {
-                var_dump($this->soapClient->__getLastRequest());
-                var_dump($response->refundError);
-            }
 
             $this->logger->error("Payment capture: " . $merchantRefundReference, (array) $response->refundError->getError()->getExplanation());
 
@@ -516,11 +500,7 @@ class ApiClient
 
         // validate response
         if ($response->getStatusError()) {
-            if ($this->test) {
-                var_dump($this->soapClient->__getLastRequest());
-                var_dump($response->getStatusError());
-            }
-
+            
             $this->logger->error("Payment status: " . $paymentOrderKey, (array) $response->getStatusError()->getError()->getExplanation());
 
             throw new \Exception($response->getStatusError()->getError()->getExplanation());
